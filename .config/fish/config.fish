@@ -3,3 +3,4 @@ if status is-interactive
 end
 
 eval "$(zoxide init fish)"
+starship init fish | source

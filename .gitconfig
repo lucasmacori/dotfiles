@@ -1,0 +1,28 @@
+[user]
+	signingkey = {GPG_SIGNING_KEY} 
+	name = Lucas MACORI
+	email = {GITHUB_PRIVATE_EMAIL} 
+[commit]
+	gpgsign = true
+[alias]
+  st = status
+  oops = commit --amend --no-edit
+  lol = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  fp = fetch --prune
+  b = branch
+  ba = branch -a
+  pl = pull
+  ps = push
+  psf = push --force-with-lease
+  c = commit
+  ck = checkout
+  r = reset
+  rh = reset --hard
+  rs = reset --soft
+  rb = rebase
+  rbc = rebase --continue
+  rbs = rebase --skip
+  cp = cherry-pick
+  m = merge
+[pull]
+  rebase = true

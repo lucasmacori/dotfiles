@@ -9,10 +9,11 @@ sudo pacman -Sy greetd greetd-tuigreet xdg-desktop-portal-hyprland
 sudo cp ./install_resources/greetd.config.toml /etc/greetd/config.toml
 sudo systemctl enable --now greetd
 
-# Terminal, clis and tuis
+# Terminal, CLIs and TUIs 
 echo "Installing terminal tools..."
-sudo pacman -Sy alacritty vim nvim tmux git swww lazygit brightnessctl jq less openssh fish zoxide
-chsh -s $(which fish)
+sudo pacman -Sy alacritty vim nvim tmux git swww lazygit brightnessctl jq less openssh fish zoxide ttf-firacode-nerd
+chsh -s $(which fish) # Using fish as default shell
+curl -sS https://starship.rs/install.sh | sh # Starship prompt
 
 # GUIs
 echo "Installing GUI apps"
@@ -20,6 +21,8 @@ sudo pacman -Sy nautilus firefox
 
 # Development tools (Docker, compilers, sdks)
 echo "Installing development tools..."
+sudo pacman -S docker
+sudo systemctl enable docker
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash # nvm (for Node)
 curl -s "https://get.sdkman.io" | bash                                          # sdkman (for Java)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh                  # Rust
@@ -30,7 +33,7 @@ ssh-keygen -t rsa
 
 # Git config
 echo "Setting up git config..."
-curl -L -H "Accept: application/vnd.github+json" https://api.github.com/gists/9e4b09d2b96028f79a627c048e8f09f4 | jq -r ".files.git_aliases.content" >>~/.gitconfig
+cp ./.gitconfig ~/.gitconfig
 
 # Setup dotfiles
 echo "Setting dotfiles..."
