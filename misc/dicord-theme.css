@@ -1,0 +1,103 @@
+/* color options */
+:root {
+    --colors: on; /* off: discord default colors, on: custom colors */
+
+    /* text colors (warm parchment) */
+    --text-0: var(--bg-4);          /* text on colored elements */
+    --text-1: #e6dccf;              /* main text */
+    --text-2: #d8cdbf;              /* headings */
+    --text-3: #cbbfb2;              /* normal text */
+    --text-4: #a89f95;              /* icons/channels */
+    --text-5: #7e766f;              /* muted/timestamps */
+
+    /* background and dark colors (coffee / beige-brown) */
+    --bg-1: #3a332d;                /* dark buttons when clicked */
+    --bg-2: #312a24;                /* dark buttons */
+    --bg-3: #2b2621;                /* spacing, secondary */
+    --bg-4: #1f1b17;                /* main background */
+    --hover:  rgba(230, 220, 207, 0.08);
+    --active: rgba(230, 220, 207, 0.14);
+    --active-2: rgba(230, 220, 207, 0.20);
+    --message-hover: var(--hover);
+
+    /* accent colors (warm, pastel) */
+    --accent-1: var(--yellow-2);    /* links and other accent text */
+    --accent-2: var(--orange-2);    /* small accent elements */
+    --accent-3: var(--orange-3);    /* accent buttons */
+    --accent-4: var(--orange-4);    /* accent buttons when hovered */
+    --accent-5: var(--orange-5);    /* accent buttons when clicked */
+    --accent-new: var(--red-2);     /* mute/deafen etc */
+
+    --mention: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--accent-2), transparent 88%) 40%,
+        transparent
+    );
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--accent-2), transparent 92%) 40%,
+        transparent
+    );
+    --reply: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--text-3), transparent 88%) 40%,
+        transparent
+    );
+    --reply-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--text-3), transparent 92%) 40%,
+        transparent
+    );
+
+    /* status indicator colors */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+
+    /* border colors */
+    --border-light: rgba(230, 220, 207, 0.10);
+    --border: rgba(230, 220, 207, 0.16);
+    --border-hover: var(--yellow-2);
+    --button-border: rgba(230, 220, 207, 0.12);
+
+    /* base colors (pastel warm set) */
+    --red-1: #d8a08d;
+    --red-2: #c97b63;
+    --red-3: #b56a56;
+    --red-4: #9f5c4c;
+    --red-5: #8a4f42;
+
+    --green-1: #c9d4b0;
+    --green-2: #b6c49c;
+    --green-3: #a3b48a;
+    --green-4: #91a57a;
+    --green-5: #80966b;
+
+    --blue-1: #b9cfe0;
+    --blue-2: #9bbbd4;
+    --blue-3: #86a8c3;
+    --blue-4: #7395b1;
+    --blue-5: #6183a0;
+
+    --yellow-1: #edd8b0;
+    --yellow-2: #e2c792;
+    --yellow-3: #d6b477;
+    --yellow-4: #caa25f;
+    --yellow-5: #be924a;
+
+    --purple-1: #d2c3e6;
+    --purple-2: #c49ec4;
+    --purple-3: #b088b7;
+    --purple-4: #9a73a8;
+    --purple-5: #845f97;
+
+    /* extra warm “orange” ramp used for accents */
+    --orange-1: #e2c1a1;
+    --orange-2: #d2a679;
+    --orange-3: #c49369;
+    --orange-4: #b7815b;
+    --orange-5: #a96f4f;
+}
+
