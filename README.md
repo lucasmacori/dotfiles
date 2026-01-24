@@ -16,3 +16,11 @@ git clone git@github.com:lucasmacori/dotfiles.git
 cd dotfiles
 sudo chmod +x setup-arch.sh
 ```
+
+## Theme
+
+Hyprland and nvim themes are based on rumda config : https://github.com/Nytril-ark/rumda/tree/main
+
+They have been edited to fit my taste but most of it is used.
+
+Keybindings are different, and layout is FR instead of US as I'm using an AZERTY keyboard.

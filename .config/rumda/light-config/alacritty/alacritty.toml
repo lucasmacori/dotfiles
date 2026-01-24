@@ -1,0 +1,66 @@
+# $HOME/.config/alacritty/alacritty.toml
+
+[window]
+opacity = 1.0
+dimensions = { columns = 75, lines = 20 }
+blur = true
+padding.x = 7
+padding.y = 8
+decorations = "None"
+decorations_theme_variant = "Dark"
+title = "  "
+
+[font]
+# =======================Terminess
+normal.family = "Firacode Nerd Font"
+normal.style = "Bold"
+size = 12.0
+# =======================Dogica
+# normal.family = "Dogica Pixel"
+# size = 7
+# offset.y = 8
+# =============================
+
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+
+[colors.primary]
+background = "#F5DCC6"
+foreground = "#4E2E1F"
+
+[colors.cursor]
+cursor = "#6D4A39"
+text = "#F5DCC6"
+
+[colors.selection]
+text = "#45373c"
+background = "#E6C0A1"
+
+[colors.normal]
+black = "#20111b"
+red = "#be100e"
+green = "#858162"
+yellow = "#d08b30"
+blue = "#426a79"
+magenta = "#97522c"
+cyan = "#989a9c"
+white = "#968c83"
+
+[colors.bright]
+black = "#5e5252"
+red = "#be100e"
+green = "#858162"
+yellow = "#d08b30"
+blue = "#426a79"
+magenta = "#97522c"
+cyan = "#989a9c"
+white = "#F5DCC6"
+
+[terminal]
+[terminal.shell]
+program = "/usr/bin/fish"
+
+# Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
+# Google to test colors before setting a value, or simply using an editor such as VS Code where colors are displayed in a 
+# small box when a HEX is detected by the editor.

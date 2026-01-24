@@ -1,0 +1,31 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ *
+ * Available Colors Schemes
+ *
+ * adapta    catppuccin    everforest    navy       paper
+ * arc       cyberpunk     gruvbox       nord       solarized
+ * black     dracula       lovelace      onedark    yousai
+ *
+ **/
+
+
+/*---------------
+Custom Rumda-light colorscheme, by @Nytril-ark:
+---------------*/
+
+* {
+    background:     #f0c997FF;  /* backgroundColor */
+    background-alt: #f0bb90FF;  /* moduleBG */
+    foreground:     #784d37FF;  /* shadowColor - dark text */
+    selected:       #c47c4fFF;  /* accent2Color */
+    active:         #a1694dFF;  /* accentColor */
+    urgent:         #9A4235AA;  /* errorColor */
+    border:         #f2bc88FF;  /* borderColor */
+    indicator-bg:   #dba380FF;  /* indicatorBGColor */
+    gradient:       #a87358FF;  /* gradientAccent2Color */
+}
