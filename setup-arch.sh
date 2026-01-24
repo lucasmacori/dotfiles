@@ -5,12 +5,14 @@
 # Window manager (Hyprland)
 echo "Installing Hyprland..."
 yay no-confirm -S hypr ags-hyprpanel-git hyprpaper sherlock-launcher-bin clipse
-sudo pacman -Sy greetd greetd-tuigreet
-cp ./install_resources/greetd.config.toml /etc/greetd/config.toml
+sudo pacman -Sy greetd greetd-tuigreet xdg-desktop-portal-hyprland
+sudo cp ./install_resources/greetd.config.toml /etc/greetd/config.toml
+sudo systemctl enable --now greetd
 
 # Terminal, clis and tuis
 echo "Installing terminal tools..."
-sudo pacman -Sy alacritty vim nvim tmux git swww lazygit brightnessctl jq less openssh
+sudo pacman -Sy alacritty vim nvim tmux git swww lazygit brightnessctl jq less openssh fish zoxide
+chsh -s $(which fish)
 
 # GUIs
 echo "Installing GUI apps"
