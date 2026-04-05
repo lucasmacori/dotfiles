@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "skills": {
+    "jira": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/davila7/claude-code-templates.git",
+      "skillPath": "cli-tool/components/skills/ai-research/jira/SKILL.md",
+      "skillFolderHash": "c727e041f8c55d018d6dd97a871b8ff2572dafe5",
+      "installedAt": "2026-04-05T18:50:12.505Z",
+      "updatedAt": "2026-04-05T18:50:12.505Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-04-05T18:50:20.264Z",
+      "updatedAt": "2026-04-05T18:50:20.264Z"
+    },
+    "gitlab-cli-skills": {
+      "source": "vince-winkintel/gitlab-cli-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vince-winkintel/gitlab-cli-skills.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "26b4fd8ad9ae112f652ab86ddd11f80acb4b0a37",
+      "installedAt": "2026-04-05T18:50:58.548Z",
+      "updatedAt": "2026-04-05T18:50:58.548Z"
+    },
+    "gh-cli": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/gh-cli/SKILL.md",
+      "skillFolderHash": "437437f7f20bcdbbdb3081cf164435a388c0a39a",
+      "installedAt": "2026-04-05T18:51:39.987Z",
+      "updatedAt": "2026-04-05T18:51:39.987Z"
+    },
+    "obsidian-markdown": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "skillFolderHash": "5caf5d9e7de204f3904216857545f2aa36bcfcac",
+      "installedAt": "2026-04-05T18:52:28.980Z",
+      "updatedAt": "2026-04-05T18:52:28.980Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "a203aee7243640ceb56ce2c6c4ab286573df5e69",
+      "installedAt": "2026-04-05T18:53:45.476Z",
+      "updatedAt": "2026-04-05T18:53:45.476Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-04-05T18:54:15.699Z",
+      "updatedAt": "2026-04-05T18:54:15.699Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      }
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    },
+    "figma-kiabi": {
+      "type": "local",
+      "command": ["npx", "-y", "figma-developer-mcp", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}"
+      },
+      "enabled": true,
+      "timeout": 15000
+    },
+    "sonarqube-cloud-kiabi": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "SONARQUBE_TOKEN",
+        "-e",
+        "SONARQUBE_ORG",
+        "mcp/sonarqube"
+      ],
+      "environment": {
+        "SONARQUBE_TOKEN": "{env:SONARQUBE_TOKEN_KIABI}",
+        "SONARQUBE_ORG": "{env:SONARQUBE_ORG_KIABI}"
+      },
+      "enabled": true,
+      "timeout": 15000
+    }
+  },
+  "plugin": ["opencode-gemini-auth@latest"],
+  "skills": {
+    "paths": ["/Users/lucasmacori/.agents/skills"],
+    "urls": []
+  },
+  "tools": {
+    "figma-kiabi*": false,
+    "sonarqube-cloud-kiabi*": false,
+    "chrome-devtools*": false
+  },
+  "permission": {
+    "skill": {
+      "frontend-design": "deny",
+      "vercel-react-best-practices": "deny"
+    }
+  },
+  "agent": {
+    "K frontend developer": {
+      "color": "#61DAFB",
+      "permission": {
+        "skill": {
+          "frontend-design": "allow",
+          "vercel-react-best-practices": "allow"
+        }
+      },
+      "tools": {
+        "figma-kiabi": true,
+        "sonarqube-cloud-kiabi": true,
+        "chrome-devtools": true
+      }
+    },
+    "K backend developer": {
+      "color": "#E53935",
+      "tools": {
+        "sonarqube-cloud-kiabi": true
+      }
+    }
+  }
+}

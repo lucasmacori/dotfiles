@@ -1,0 +1,66 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      }
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    },
+    "figma-kiabi": {
+      "type": "local",
+      "command": ["npx", "-y", "figma-developer-mcp", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}"
+      },
+      "enabled": true,
+      "timeout": 15000
+    },
+    "sonarqube-cloud-kiabi": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "SONARQUBE_TOKEN",
+        "-e",
+        "SONARQUBE_ORG",
+        "mcp/sonarqube"
+      ],
+      "environment": {
+        "SONARQUBE_TOKEN": "{env:SONARQUBE_TOKEN_KIABI}",
+        "SONARQUBE_ORG": "{env:SONARQUBE_ORG_KIABI}"
+      },
+      "enabled": true,
+      "timeout": 15000
+    }
+  },
+  "plugin": ["opencode-gemini-auth@latest"],
+  "tools": {
+    "figma-kiabi*": false,
+    "sonarqube-cloud-kiabi*": false,
+    "chrome-devtools*": false
+  },
+  "agent": {
+    "kiabi-frontend-developer": {
+      "tools": {
+        "figma-kiabi": true,
+        "sonarqube-cloud-kiabi": true,
+        "chrome-devtools": true
+      }
+    },
+    "kiabi-backend-developer": {
+      "tools": {
+        "sonarqube-cloud-kiabi": true
+      }
+    }
+  }
+}
