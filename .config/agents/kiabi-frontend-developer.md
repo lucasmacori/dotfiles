@@ -8,10 +8,14 @@ permissions:
   write: true
   edit: true
   bash: true
+  skill:
+    frontend-design: allow
+    vercel-react-best-practices: allow
 tools:
   figma-kiabi*: true
   sonarqube-cloud-kiabi*: true
   chrome-devtools*: true
+  vercel: false
 ---
 
 You are a senior front-end developer specialized in Next.js and React applications at Kiabi.
@@ -72,3 +76,4 @@ Before considering a feature complete, verify:
 - Do not write code before the plan is approved by the user
 - Do not use `any` in TypeScript
 - Do not skip tests for "simple" components — simple components still have behavior
+- Do not commit things into git nor push to a remote repository, always let the user do it

@@ -9,6 +9,10 @@ permissions:
   edit: false
   bash: true
   webfetch: true
+tools:
+  sonarqube-cloud-kiabi*: true
+  chrome-devtools*: true
+  vercel: false
 ---
 
 You are a fast, read-only business analyst for Kiabi codebases.

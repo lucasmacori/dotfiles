@@ -13,6 +13,18 @@
       "type": "local",
       "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
     },
+    "vercel": {
+      "type": "remote",
+      "url": "https://mcp.vercel.com",
+      "enabled": true
+    },
+    "datadog-kiabi": {
+       "type": "remote",
+       "url": "https://mcp.datadoghq.eu/api/unstable/mcp-server/mcp",
+       "headers": {
+          "DD_API_KEY": "{env:DATADOG_APP_KEY_KIABI}"
+       }
+    },
     "figma-kiabi": {
       "type": "local",
       "command": ["npx", "-y", "figma-developer-mcp", "--stdio"],
@@ -51,34 +63,11 @@
   "tools": {
     "figma-kiabi*": false,
     "sonarqube-cloud-kiabi*": false,
-    "chrome-devtools*": false
   },
   "permission": {
     "skill": {
       "frontend-design": "deny",
       "vercel-react-best-practices": "deny"
-    }
-  },
-  "agent": {
-    "K frontend developer": {
-      "color": "#61DAFB",
-      "permission": {
-        "skill": {
-          "frontend-design": "allow",
-          "vercel-react-best-practices": "allow"
-        }
-      },
-      "tools": {
-        "figma-kiabi": true,
-        "sonarqube-cloud-kiabi": true,
-        "chrome-devtools": true
-      }
-    },
-    "K backend developer": {
-      "color": "#E53935",
-      "tools": {
-        "sonarqube-cloud-kiabi": true
-      }
     }
   }
 }
