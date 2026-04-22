@@ -1,1 +1,6 @@
-/home/lucas/.config/rumda/dark-config/alacritty/alacritty.toml
+[window]
+opacity = 0.6
+
+[terminal]
+[terminal.shell]
+program = "/usr/bin/fish"
