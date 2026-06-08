@@ -1,11 +1,11 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    event = "User FilePost",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      dofile(vim.g.base46_cache .. "git")
-      local gitsigns = require("gitsigns").setup(opts)
-      vim.keymap.set('n', '<leader>gb', gitsigns.blame_line, {})
-    end
-  }
+      local gitsigns = require("gitsigns")
+      gitsigns.setup()
+      vim.keymap.set("n", "<leader>gb", gitsigns.blame_line, {})
+    end,
+  },
 }
