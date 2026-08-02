@@ -13,7 +13,7 @@ sudo systemctl enable --now greetd
 
 # Terminal, CLIs and TUIs
 echo "Installing terminal tools..."
-sudo pacman -Sy alacritty vim nvim tmux git lazygit brightnessctl jq less openssh fish zoxide ttf-firacode-nerd ttf-jetbrains-mono-nerd fisher
+sudo pacman -Sy alacritty vim nvim tmux git lazygit brightnessctl jq less openssh fish zoxide ttf-firacode-nerd ttf-jetbrains-mono-nerd fisher fzf
 chsh -s $(which fish)                        # Using fish as default shell
 curl -sS https://starship.rs/install.sh | sh # Starship prompt
 

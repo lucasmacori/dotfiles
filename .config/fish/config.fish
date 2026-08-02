@@ -4,6 +4,7 @@ end
 
 eval "$(zoxide init fish)"
 starship init fish | source
+fzf --fish | source
 export PATH="$HOME/.local/bin:$PATH"
 
 export OPENCODE_DISABLE_CLAUDE_CODE_SKILLS=1
