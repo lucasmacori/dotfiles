@@ -43,7 +43,11 @@ button:hover {
 #network,
 #pulseaudio,
 #cpu,
-#memory {
+#memory,
+#power,
+#logout,
+#shutdown,
+#restart {
   min-height: 28px;
   padding: 0 11px;
   background: @polar-night;
@@ -96,8 +100,29 @@ button:hover {
 #network,
 #pulseaudio,
 #cpu,
-#memory {
+#memory,
+#power {
   color: @frost;
+}
+
+#power {
+  min-width: 0;
+  padding: 0 6px 0 4px;
+  color: @critical;
+  font-size: 16px;
+}
+
+#logout,
+#shutdown,
+#restart {
+  color: @snow-bright;
+}
+
+#logout:hover,
+#shutdown:hover,
+#restart:hover {
+  color: @critical;
+  border-color: rgba(191, 97, 106, 0.9);
 }
 
 #bluetooth.connected,
