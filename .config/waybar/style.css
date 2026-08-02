@@ -1,0 +1,137 @@
+@define-color polar-night rgba(46, 52, 64, 0.70);
+@define-color polar-night-light rgba(59, 66, 82, 0.96);
+@define-color border rgba(76, 86, 106, 0.85);
+@define-color snow #d8dee9;
+@define-color snow-bright #eceff4;
+@define-color frost #88c0d0;
+@define-color frost-dark #5e81ac;
+@define-color warning #ebcb8b;
+@define-color critical #bf616a;
+@define-color muted #7b88a1;
+
+* {
+  min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+window#waybar {
+  background: transparent;
+  color: @snow;
+}
+
+button {
+  box-shadow: none;
+  text-shadow: none;
+  background: transparent;
+  color: @snow;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+button:hover {
+  background: @polar-night-light;
+  color: @snow-bright;
+}
+
+#workspaces,
+#window,
+#clock,
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#memory {
+  min-height: 28px;
+  padding: 0 11px;
+  background: @polar-night;
+  border: 1px solid @border;
+  border-radius: 10px;
+}
+
+#workspaces {
+  padding: 0 3px;
+}
+
+#workspaces button {
+  min-width: 24px;
+  margin: 3px 1px;
+  padding: 0 7px;
+  border-radius: 7px;
+  color: @muted;
+}
+
+#workspaces button:hover {
+  background: rgba(136, 192, 208, 0.14);
+  color: @frost;
+}
+
+#workspaces button.active {
+  background: @frost-dark;
+  color: @snow-bright;
+}
+
+#workspaces button.urgent {
+  background: @critical;
+  color: @snow-bright;
+}
+
+#window {
+  color: @snow;
+}
+
+#window.empty {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+}
+
+#clock {
+  color: @frost;
+}
+
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#memory {
+  color: @frost;
+}
+
+#bluetooth.connected,
+#network.wifi,
+#network.ethernet {
+  color: @snow-bright;
+}
+
+#bluetooth.disabled,
+#bluetooth.off,
+#network.disconnected,
+#pulseaudio.muted {
+  color: @muted;
+}
+
+#cpu.warning,
+#memory.warning {
+  color: @warning;
+  border-color: rgba(235, 203, 139, 0.8);
+}
+
+#cpu.critical,
+#memory.critical {
+  color: @critical;
+  border-color: rgba(191, 97, 106, 0.9);
+}
+
+tooltip {
+  padding: 8px;
+  background: rgba(46, 52, 64, 0.98);
+  border: 1px solid @border;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @snow;
+}

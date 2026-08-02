@@ -6,14 +6,14 @@ sudo pacman -S yay
 
 # Window manager (Hyprland)
 echo "Installing Hyprland..."
-yay no-confirm -S hypr clipse
-sudo pacman -Sy greetd greetd-tuigreet xdg-desktop-portal-hyprland hyprlock quickshell rofi swww mako
+yay no-confirm -S hypr clipse elephant elephant-providerlist elephant-desktopapplications walker
+sudo pacman -Sy greetd greetd-tuigreet xdg-desktop-portal-hyprland hyprlock quickshell waybar swww bluez bluez-utils blueman networkmanager pipewire pipewire-pulse pavucontrol
 sudo cp ./install_resources/greetd.config.toml /etc/greetd/config.toml
 sudo systemctl enable --now greetd
 
 # Terminal, CLIs and TUIs
 echo "Installing terminal tools..."
-sudo pacman -Sy alacritty vim nvim tmux git lazygit brightnessctl jq less openssh fish zoxide ttf-firacode-nerd fisher
+sudo pacman -Sy alacritty vim nvim tmux git lazygit brightnessctl jq less openssh fish zoxide ttf-firacode-nerd ttf-jetbrains-mono-nerd fisher
 chsh -s $(which fish)                        # Using fish as default shell
 curl -sS https://starship.rs/install.sh | sh # Starship prompt
 
@@ -29,6 +29,10 @@ fisher install jorgebucaran/nvm.fish
 fisher install reitzig/sdkman-for-fish
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Rust
+
+# Enabling services
+sudo systemctl enable --now bluetooth.service
+sudo systemctl enable --now NetworkManager.service
 
 # Git config
 echo "Setting up git config..."

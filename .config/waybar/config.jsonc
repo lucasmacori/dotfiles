@@ -1,0 +1,121 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin-top": 6,
+  "margin-left": 8,
+  "margin-right": 8,
+  "spacing": 6,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "sort-by-number": true,
+    "disable-scroll": true,
+    "all-outputs": false
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "icon": true,
+    "icon-size": 16,
+    "max-length": 55,
+    "separate-outputs": true,
+    "tooltip-format": "{}"
+  },
+
+  "clock": {
+    "format": "{:%d/%m/%Y · %H:%M}",
+    "interval": 60,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "first-day-of-week": 1,
+      "format": {
+        "months": "<span color='#88c0d0'><b>{}</b></span>",
+        "weekdays": "<span color='#81a1c1'><b>{}</b></span>",
+        "days": "<span color='#d8dee9'>{}</span>",
+        "today": "<span color='#2e3440' background='#88c0d0'><b>{}</b></span>"
+      }
+    }
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲 Off",
+    "format-off": "󰂲 Off",
+    "format-on": " On",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "Controller: {controller_alias}\n{num_connections} connected",
+    "tooltip-format-connected": "Controller: {controller_alias}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}: {device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  Ethernet",
+    "format-linked": "󰈀  Linked",
+    "format-disconnected": "󰖪  Disconnected",
+    "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nAddress: {ipaddr}/{cidr}",
+    "tooltip-format-ethernet": "{ifname}\nAddress: {ipaddr}/{cidr}\nGateway: {gwaddr}",
+    "tooltip-format-disconnected": "No network connection",
+    "on-click": "exec \"${TERMINAL:-alacritty}\" -e nmtui"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": " {icon}  {volume}%",
+    "format-muted": "󰝟  Muted",
+    "format-bluetooth-muted": " 󰝟  Muted",
+    "format-icons": {
+      "headphone": "",
+      "headset": "󰋎",
+      "hands-free": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 2,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip-format": "Volume: {volume}%\nSink: {desc}"
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 2,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "tooltip-format": "CPU usage: {usage}%"
+  },
+
+  "memory": {
+    "format": "  {percentage}%",
+    "interval": 5,
+    "states": {
+      "warning": 75,
+      "critical": 90
+    },
+    "tooltip-format": "Memory: {used:0.1f} GiB / {total:0.1f} GiB"
+  }
+}
