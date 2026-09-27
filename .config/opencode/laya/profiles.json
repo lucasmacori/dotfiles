@@ -1,0 +1,41 @@
+{
+  "micro": {
+    "model": {
+      "providerID": "ollama",
+      "id": "ministral-3:8b"
+    },
+    "criteria": "bounded low-complexity tool use or response requiring negligible reasoning: phatic interaction, acknowledgement, reading or writing a simple file, a straightforward web lookup, or mechanical transformation of fully supplied content"
+  },
+  "basic": {
+    "model": {
+      "providerID": "openai",
+      "id": "gpt-5.6-luna",
+      "variant": "low"
+    },
+    "criteria": "simple low-risk task requiring light reasoning, including reading or writing files, repository discovery, straightforward web search, concise factual answers, explanations, summaries, or drafting from supplied context"
+  },
+  "standard": {
+    "model": {
+      "providerID": "openai",
+      "id": "gpt-6-luna",
+      "variant": "medium"
+    },
+    "criteria": "routine code implementation or engineering work requiring generated or modified code, tests, debugging, refactoring, or commands beyond straightforward file and web tool use"
+  },
+  "advanced": {
+    "model": {
+      "providerID": "openai",
+      "id": "gpt-6-sol",
+      "variant": "low"
+    },
+    "criteria": "planning, cross-file or multi-component reasoning, difficult implementation, nontrivial debugging, integration decisions, significant reviews, or comparison of multiple approaches within an established architecture"
+  },
+  "deep": {
+    "model": {
+      "providerID": "openai",
+      "id": "gpt-6-sol",
+      "variant": "high"
+    },
+    "criteria": "consequential or highly uncertain reasoning involving architecture, security, privacy, compliance, migration, production, destructive operations, distributed systems, broad high-impact changes, or ambiguous root-cause diagnosis"
+  }
+}
